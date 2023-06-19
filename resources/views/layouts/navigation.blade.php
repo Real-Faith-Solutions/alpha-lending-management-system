@@ -82,16 +82,16 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('service.add-client-account.create') }}"
+                                <a href="{{ url('service.add-client-account.create') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Add Client Account</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('service.add-analysis-request.create') }}"
+                                <a href="{{ url('service.add-analysis-request.create') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Add Analysis Request</a>
                             </li>
                             <li>
-                                <a href="{{ route('service.lab-result-status.index') }}"
+                                <a href="{{ url('service.lab-result-status.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Lab Result Status</a>
                             </li>
                         </ul>
@@ -116,11 +116,11 @@
                             </li> --}}
 
                             <li>
-                                <a href="{{ route('laboratory.lab-lab-work-order.labWorkOrder') }}"
+                                <a href="{{ url('laboratory.lab-lab-work-order.labWorkOrder') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Lab Work Order</a>
                             </li>
                             <li>
-                                <a href="{{ route('laboratory.lab_approval.index') }}"
+                                <a href="{{ url('laboratory.lab_approval.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Lab Approval</a>
                             </li>
                         </ul>
@@ -141,11 +141,11 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('record-and-report.analysis-request.index') }}"
+                                <a href="{{ url('record-and-report.analysis-request.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Analysis Request</a>
                             </li>
                             <li>
-                                <a href="{{ route('record-and-report.lab-acceptance.index') }}"
+                                <a href="{{ url('record-and-report.lab-acceptance.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Lab Acceptance</a>
                             </li>
                             <li>
@@ -157,7 +157,7 @@
                                     class="block px-4 py-2 hover:bg-gray-100">Facility</a>
                             </li>
                             <li>
-                                <a href="{{ route('record-and-report.record_and_report.client_list.index') }}"
+                                <a href="{{ url('record-and-report.record_and_report.client_list.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Client Lists</a>
                             </li>
                         </ul>
@@ -179,7 +179,7 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ url('user-management/user-lists') }}"
+                                <a href="{{ route('user-management.user-lists.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">User Lists</a>
                             </li>
 
