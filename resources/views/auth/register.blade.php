@@ -63,7 +63,7 @@
 
         </div> --}}
 
-        <div class="mb-3 flex justify-end">
+        <div class="mt-4 mb-3 flex justify-end">
             <button class="btn btn-primary" type="submit">
                 Sign up
             </button>

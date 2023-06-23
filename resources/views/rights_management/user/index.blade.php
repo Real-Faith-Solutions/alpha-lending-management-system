@@ -1,15 +1,15 @@
 @extends('layouts.app')
-@section('title', 'User Lists')
+@section('title', 'User List')
 @section('content')
 
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
-            <a class="btn btn-primary" href="{{ route('register') }}">Add new User</a>
+                 <a class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" href="{{ route('register') }}">ADD NEW USER</a>
         </div>
 
-        <div class="relative overflow-x-auto sm:rounded-lg">
-            <table class="w-full text-left text-sm text-gray-500">
+        <div class="relative overflow-x-auto sm:rounded-lg border-solid border-2 border-sky-500">
+            <table class="w-full text-left text-sm text-gray-500 ml-auto">
                 <thead class="bg-gray-50 text-xs uppercase text-gray-700">
                     <tr>
                         <th scope="col" class="px-6 py-3">
@@ -25,9 +25,16 @@
                             Status
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            <span class="sr-only">Action</span>
+
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+
                         </th>
                     </tr>
+
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
@@ -55,10 +62,10 @@
                                 @endif
 
                             </td>
-                            <td class="px-6 py-4 text-right">
+                            <td class="px-6 py-4 text-left">
 
                                 @if ($user->status == '0')
-                                    <form action="{{ route('user-management.user-lists.setAsActive', $user) }}" method="POST">
+                                    <form action="{{ route('rights-management.user-lists.setAsActive', $user) }}" method="POST">
                                         @csrf
                                         @method('PUT')
                                         <button type="submit" class="font-medium text-blue-600 hover:underline">
@@ -67,7 +74,7 @@
                                     </form>
 
                                 @else
-                                    <form action="{{ route('user-management.user-lists.setAsInactive', $user) }}" method="POST">
+                                    <form action="{{ route('rights-management.user-lists.setAsInactive', $user) }}" method="POST">
                                         @csrf
                                         @method('PUT')
                                         <button type="submit" class="font-medium text-blue-600 hover:underline">
@@ -75,6 +82,22 @@
                                         </button>
                                     </form>
                                 @endif
+                            </td>
+
+                            <td class="px-6 py-4 text-left">
+                                <a class="px-5 py-2 bg-rose-500 hover:bg-rose-700 text-white cursor-pointer rounded-md" href="#">Reject</a>
+                                {{-- @if ($user->status == 1) <button class="btn btn-danger btn-sm btn-block">Reject</button>
+                                    @else <button class="btn btn-primary btn-sm btn-block">Approve</button>
+                                @endif --}}
+                                </a>
+                            </td>
+
+                            <td class="px-6 py-4 text-left">
+                                <a class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" href="#">Delete</a>
+                                {{-- @if ($user->status == 1) <button class="btn btn-primary btn-sm btn-block">Approve</button>
+                                    @else <button class="btn btn-primary btn-sm btn-block">Approve</button>
+                                @endif --}}
+                                </a>
                             </td>
                         </tr>
                     @endforeach
@@ -85,3 +108,19 @@
     </div>
 
 @endsection
+
+{{--
+<!-- /.content -->
+<script>
+$(document).ready(function(){
+    $('.delete_form').on('submit'), function(){
+        if(confirm("Are you sure you want to delete it?")){
+            return true;
+        }else{
+            return false;
+        }
+
+});
+</script>
+@endsection --}}
+

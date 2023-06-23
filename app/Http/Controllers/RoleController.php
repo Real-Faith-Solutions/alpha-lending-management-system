@@ -10,7 +10,7 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::all();
-        return view('user_management.role.index', compact('roles'));
+        return view('rights_management.role.index', compact('roles'));
     }
 
     public function roleInRegister(){

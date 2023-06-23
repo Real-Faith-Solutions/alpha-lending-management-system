@@ -29,7 +29,27 @@ input[type="checkbox"] {
 .card {
     @apply overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900 mb-3;
 }
-
+.div-grid {
+    @apply grid grid-cols-1 gap-1 mb-4;
+}
+.th {
+    @apply px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+}
+.table {
+    @apply w-full text-sm text-left text-gray-500 dark:text-gray-400 m-auto border-solid;
+}
+.tr {
+    @apply bg-white border-b dark:bg-gray-900 dark:border-gray-700;
+}
+.td {
+    @apply px-6 py-4;
+}
+.thead {
+    @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+.t-body {
+    @apply bg-white;
+}
 input.invalid {
     @apply rounded w-full text-red-700 focus:outline-none border-b-4 border-red-300 focus:border-purple-600 transition duration-500 px-3 pb-3
 rounded w-full text-red-700 focus:outline-none border-b-4 border-red-300 focus:border-purple-600 transition duration-500 px-3 pb-3;

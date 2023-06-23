@@ -21,8 +21,8 @@
             @enderror
         </div>
 
-        <div class="mt-4 flex items-center justify-end">
-            <button class="btn btn-primary">
+        <div class="mt-6 flex items-center justify-end">
+            <button class="py-3 px-4 w-50 text-center bg-indigo-600 rounded-full text-white text-sm hover:bg-indigo-500">
                 {{ __('Email Password Reset Link') }}
             </button>
         </div>

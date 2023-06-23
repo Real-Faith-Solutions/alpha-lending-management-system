@@ -27,17 +27,16 @@ use App\Http\Controllers\QuerySearchController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('master_file', function () {
+//     return view('master_file');
 // });
-
 
 
 Route::get('403', function () {
     $user = Auth::user();
 
     if ($user->status == 1) {
-        return redirect()->route('login'); 
+        return redirect()->route('login');
     }
 
     return view('forbidden.status');
@@ -52,15 +51,34 @@ Route::middleware('auth', 'status')->group(function () {
 
     Route::get('/', [DashboardController::class , 'getAllData']);
 
+    // controller tutorial ni boss
+    // Route::prefix('master-file')->group(function () {
 
-    Route::prefix('user-management')->group(function () {
+    //     Route::get('credit-assessment', [CreditAssessmentController::class, 'table'])->name('master_file.credit-assessment.table');
+
+    // });
+
+    // Route::prefix('user-management')->group(function () {
+    //     // lab result status
+    //     Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('user-management.user-lists.index');
+    //     Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('user-management.user-lists.setAsActive');
+    //     Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('user-management.user-lists.setAsInactive');
+    //     Route::get('role-lists', [RoleController::class, 'index'])->name('user-management.role-lists.index');
+
+    // });
+
+
+    Route::prefix('rights-management')->group(function () {
         // lab result status
-        Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('user-management.user-lists.index');
-        Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('user-management.user-lists.setAsActive');
-        Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('user-management.user-lists.setAsInactive');
-        Route::get('role-lists', [RoleController::class, 'index'])->name('user-management.role-lists.index');
+        Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('rights-management.user-lists.index');
+        Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('rights-management.user-lists.setAsActive');
+        Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('rights-management.user-lists.setAsInactive');
+        Route::get('role-lists', [RoleController::class, 'index'])->name('rights-management.role-lists.index');
 
     });
+
+
+
 
 
 

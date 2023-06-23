@@ -1,4 +1,4 @@
-<nav class="border-gray-200 bg-white sticky top-0 z-10"">
+<nav class="border-gray-200 bg-white sticky top-0 z-10">
     <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <a href="{{ url('/') }}" class="flex items-center">
             <img src="{{ asset('image/branding.png') }}" class="mr-3 w-44" alt="AQUALAB PH" />
@@ -167,7 +167,7 @@
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="userManagement"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        User Management <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
+                        Rights Management <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -179,12 +179,12 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('user-management.user-lists.index') }}"
+                                <a href="{{ route('rights-management.user-lists.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">User Lists</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('user-management.role-lists.index') }}"
+                                <a href="{{ route('rights-management.role-lists.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Roles</a>
                             </li>
 
