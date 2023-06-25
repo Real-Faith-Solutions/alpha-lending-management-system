@@ -1,28 +1,30 @@
-## Things you need to do
+## Things you need to do to run this project
 1. Clone the repository first in your localhost
 ```
-git clone https://github.com/Real-Faith-Solutions/lms.git
+git clone [github.com/koykoy027/s-guide.git](https://github.com/Real-Faith-Solutions/lms.git)
 ```
-2. Go your directory and type this in your terminal
+2. Go to your directory and download the dependencies
 ```
 composer install
 ```
+3. Generate .env file
 ```
 cp .env.example .env
 ```
+4. Generate APP_KEY
 ```
 php artisan key:generate
 ```
-3. Open your .env file and cofigure your database
-4. Migrate your database using
+5. Open your .env file and configure your database
+6. Migrate your database using
 ```
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 ```
-5. refresh your server
+7. refresh your server
 ```
 php artisan optimize
 ```
-6. Run your laravel project
+8. Run your Laravel project
 ```
 php artisan serve
 ```
