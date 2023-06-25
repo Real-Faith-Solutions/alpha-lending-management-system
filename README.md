@@ -1,7 +1,7 @@
 ## Things you need to do to run this project
 1. Clone the repository first in your localhost
 ```
-git clone [github.com/koykoy027/s-guide.git](https://github.com/Real-Faith-Solutions/lms.git)
+git clone github.com/Real-Faith-Solutions/lms.git
 ```
 2. Go to your directory and download the dependencies
 ```
