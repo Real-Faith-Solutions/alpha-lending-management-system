@@ -64,7 +64,7 @@
         </div> --}}
 
         <div class="mt-4 mb-3 flex justify-end">
-            <button class="btn btn-primary" type="submit">
+            <button class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" type="submit">
                 Sign up
             </button>
         </div>
