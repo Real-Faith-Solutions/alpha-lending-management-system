@@ -64,7 +64,7 @@
                                 <th scope="row" class="whitespace-nowrap px-6 py-4 font-medium text-gray-900">
                                     {{ $recentClient->account_name }}
                                 </th>
-                                <td class="px-6 py-4">
+                                <td class="px-6 py-4" >
                                     @if ($recentClient->type_of_ownership === 'Single Prorietorship')
                                         <span
                                             class="mr-2 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
@@ -90,8 +90,6 @@
                                             {{ $recentClient->type_of_ownership }}
                                         </span>
                                     @endif
-
-
 
                                 </td>
                             </tr>

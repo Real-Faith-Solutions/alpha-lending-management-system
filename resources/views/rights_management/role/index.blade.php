@@ -2,22 +2,120 @@
 @section('title', 'ROLE LIST')
 @section('content')
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
-                 <a class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" href="#">ADD NEW ROLE</a>
+                 <a class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" id="addRoles">ADD NEW ROLE</a>
         </div>
+
+     <!-- Overlay element -->
+     <div id="overlay" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-400 bg-opacity-60"></div>
+
+     {{-- <!-- The dialog -->
+     <div id="dialog"
+         class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/5 bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+         <h1 class="text-2xl font-semibold text-blue-500">ADD ROLES</h1>
+         <div class="w-full">
+             <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+             <div class="mb-4">
+                 <label class="block text-sm font-bold mb-2" for="username">
+                   Add Roles
+                 <input class="shadow appearance-none border rounded w-4/5 py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" placeholder="" required>
+                 </label>
+             </div>
+
+                 <div class="flex justify-between mt-2">
+                     <input class="" type="checkbox" id="flexCheckChecked" />
+                     <label class="" for="flexCheckChecked">
+                         Dashboard
+                     </label>
+                     <br />
+                     <input class="" type="checkbox" id="flexCheckChecked1" />
+                     <label class="" for="flexCheckChecked1">
+                         Rights Management
+                     </label>
+                     <br />
+                     <input class="form-check-input" type="checkbox" id="flexCheckChecked2" />
+                     <label class="form-check-label" for="flexCheckChecked2">
+                         Master List
+                     </label>
+                 </div>
+
+                 <div class="flex justify-end mt-2">
+                     <ol>
+                         <ul>
+                             <input class="form-check-input" type="checkbox" id="flexCheckChecked2.1" />
+                             <label class="form-check-label" for="flexCheckChecked2.1">
+                                 Add
+                             </label>
+                         </ul>
+
+                         <ul>
+                             <input class="form-check-input" type="checkbox" id="flexCheckChecked2.2" />
+                             <label class="form-check-label" for="flexCheckChecked2.2">
+                                 Revise
+                             </label>
+                         </ul>
+
+                         <ul>
+                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2.3" />
+                             <label class="form-check-label" for="flexCheckChecked2.3">
+                                 Delete
+                             </label>
+                         </ul>
+
+                         <ul>
+                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2.4" />
+                             <label class="form-check-label" for="flexCheckChecked2.4">
+                                 Upload
+                             </label>
+                         </ul>
+
+                         <ul>
+                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2.5" />
+                             <label class="form-check-label" for="flexCheckChecked2.5">
+                                 Approved/<br>
+                                 Disapproved
+                             </label>
+                         </ul>
+                     </ol>
+                 </div>
+
+                 <div class="">
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3" />
+                     <label class="form-check-label" for="flexCheckChecked3">
+                         Reports
+                     </label>
+                     <br />
+
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4" />
+                     <label class="form-check-label" for="flexCheckChecked4">
+                         Maintenance
+                     </label>
+                     <br />
+                 </div>
+            </div>
+
+
+             <div class="flex justify-end mt-2">
+                 <button id="close" class="mr-2 px-5 py-2 bg-white hover:bg-gray-500 text-gray-700 cursor-pointer rounded-md border-solid border-2 border-gray-600">
+                     Back To List
+                 </button>
+
+                 <button id="close" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-600 text-white cursor-pointer rounded-md">
+                     Save Changes
+                 </button>
+             </div>
+             </form>
+         </div>
+     </div> --}}
 
         <div class="container mx-auto">
             <div class="flex flex-col">
                 <div class="w-full">
                     <div class="p-4 border-b border-gray-200 shadow">
                         <!-- <table> -->
-                        <table id="dataTable" class="w-full border-solid border-2 border-black-900">
+                        <table id="generalTable" class="w-full border-solid border-2 border-black-900">
                             <thead class="bg-black">
                                 <tr>
                                     <th scope="row" class="px-6 py-2 text-xs text-white">
@@ -126,9 +224,23 @@
             </div>
         </div>
 
+<!-- Javascript code -->
 <script>
-    $(document).ready(function () {
-        $('#dataTable').DataTable();
-             });
+    var openButton = document.getElementById('addRoles');
+    var dialog = document.getElementById('dialog');
+    var closeButton = document.getElementById('close');
+    var overlay = document.getElementById('overlay');
+
+    // show the overlay and the dialog
+    openButton.addEventListener('click', function () {
+        dialog.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+    });
+
+    // hide the overlay and the dialog
+    closeButton.addEventListener('click', function () {
+        dialog.classList.add('hidden');
+        overlay.classList.add('hidden');
+    });
 </script>
 @endsection

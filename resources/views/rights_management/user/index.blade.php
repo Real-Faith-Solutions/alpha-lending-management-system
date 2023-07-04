@@ -2,10 +2,6 @@
 @section('title', 'USER LIST')
 @section('content')
 
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
@@ -41,7 +37,7 @@
                                     <th class="px-6 py-2 text-xs text-white">
                                     </th>
                                 </tr>
-                        </thead>
+                            </thead>
 
                             <tbody>
                                 @foreach ($users as $user)
@@ -70,7 +66,6 @@
 
                                         </td>
                                         <td class="px-6 py-4 text-left">
-
                                             @if ($user->status == '0')
                                                 <form action="{{ route('rights-management.user-lists.setAsActive', $user) }}" method="POST">
                                                     @csrf
@@ -109,7 +104,8 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                    </table>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,19 +118,19 @@
     </script>
 @endsection
 
-{{--
-<!-- /.content -->
-<script>
-$(document).ready(function(){
-    $('.delete_form').on('submit'), function(){
-        if(confirm("Are you sure you want to delete it?")){
-            return true;
-        }else{
-            return false;
-        }
+    {{--
+    <!-- /.content -->
+    <script>
+    $(document).ready(function(){
+        $('.delete_form').on('submit'), function(){
+            if(confirm("Are you sure you want to delete it?")){
+                return true;
+            }else{
+                return false;
+            }
 
-});
-</script>
-@endsection --}}
+    });
+    </script>
+    @endsection --}}
 
 

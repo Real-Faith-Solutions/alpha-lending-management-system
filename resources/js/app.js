@@ -19,3 +19,4 @@ toastr.options = {
 // Make toastr available to all components
 window.toastr = toastr;
 
+

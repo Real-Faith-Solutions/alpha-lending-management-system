@@ -28,13 +28,13 @@
                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
                     </li>
 
-                    {{-- <li>
+                    <li>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
                     </li>
 
                     <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Earnings</a>
-                    </li> --}}
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Activity Log</a>
+                    </li>
 
                     <li>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -202,6 +202,7 @@
                                 <a href="{{ route('reports.agents_commission.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Agents Commisions</a>
                             </li>
+
 
                             <li>
                                 <a href="{{ route('reports.sales_reports.index') }}"
