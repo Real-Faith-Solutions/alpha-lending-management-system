@@ -21,9 +21,9 @@
         @include('layouts.modals')
 
         <header class="bg-white shadow">
-            <div class="mx-auto max-w-7xl py-6 px-4 uppercase text-slate-500 sm:px-6 lg:px-8">
+            <div class="">
 
-                <nav class="flex" aria-label="Breadcrumb">
+                {{-- <nav class="flex" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1 md:space-x-3">
                         <li class="inline-flex items-center">
                             <a href="{{ url('/') }}"
@@ -48,7 +48,7 @@
                             </div>
                         </li>
                     </ol>
-                </nav>
+                </nav> --}}
             </div>
         </header>
 

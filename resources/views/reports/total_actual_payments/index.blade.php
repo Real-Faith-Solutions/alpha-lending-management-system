@@ -2,6 +2,10 @@
 @section('title', 'TOTAL ACTUAL PAYMENTS')
 @section('content')
 
+    <div class="p-4 sm:ml-64">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <h1 class="bold text-2xl text-blue-800 mb-6">Total Actual Payments</h1>
+
     <!-- Main content -->
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
@@ -10,7 +14,7 @@
                     @include('components.input')
 
                         <!-- button -->
-                        <div class="mt-6 mb-3 flex items-center justify-center">
+                        <div class="mt-6 mb-3 flex items-center justify-end">
                             <button class="w-40 py-3 px-4  text-center bg-indigo-600 rounded-md text-white text-sm hover:bg-indigo-500" data-bs-toggle="modal" data-bs-target="#addPayment"><i class="fa fa-plus"></i> Add Payment</button>
                         </div>
 
@@ -150,6 +154,7 @@
                         </table>
                     </div>
                 </section>
-<!-- /.content -->
+            </div>
+        </div>
 
 @endsection

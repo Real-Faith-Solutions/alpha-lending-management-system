@@ -52,6 +52,11 @@
         </div>
     </div>
 
+
+    <div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <h1 class="bold text-2xl text-blue-800 mb-6">Payment Schedule</h1>
+
     <!-- Main content -->
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
@@ -79,15 +84,6 @@
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 BORROWER NAME
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                DUE AMOUNT
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                CONTACT NO.
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                ADDRESS
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 DAY OF WEEK
@@ -120,17 +116,6 @@
                                                 2021-1-12
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
-                                                1
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">
-                                                    Jon doe
-                                                </div>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">jhondoe@example.com</div>
-                                            </td>
-                                            <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021-1-12
                                             </td>
                                             <td class="px-6 py-4">
@@ -155,6 +140,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
  <!-- Modal -->
  <script>

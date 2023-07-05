@@ -45,6 +45,10 @@
             </div>
         </div>
 
+        <div class="p-4 sm:ml-64">
+            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+                <h1 class="bold text-2xl text-blue-800 mb-6">Agents Commission</h1>
+
         <!-- Main content -->
         <div class="card mb-3 bg-white">
             <div class="mb-3 flex justify-between">
@@ -81,12 +85,6 @@
                                                 LOAN RECEIVABLE
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
-                                                TOTAL COMMISSION
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                MATURITY
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
                                                 STATUS
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
@@ -114,14 +112,6 @@
                                                 1
                                             </td>
                                             <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">
-                                                    Jon doe
-                                                </div>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">jhondoe@example.com</div>
-                                            </td>
-                                            <td class="px-6 py-4">
                                                 <div
                                                     class="mr-2 rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
                                                     PAID
@@ -143,6 +133,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
 <!-- Javascript code -->
 <script>

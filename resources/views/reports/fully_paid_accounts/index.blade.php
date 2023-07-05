@@ -2,6 +2,10 @@
 @section('title', 'FULLY PAID ACCOUNTS')
 @section('content')
 
+    <div class="p-4 sm:ml-64">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <h1 class="bold text-2xl text-blue-800 mb-6">Fully Paid Reports</h1>
+
     <!-- Main content -->
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
@@ -25,12 +29,6 @@
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 DOCUMENT NO.
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                DATE RELEASED
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                LOAN DATE
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 RECEIVABLE
@@ -67,14 +65,6 @@
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 1
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">
-                                                    Jon doe
-                                                </div>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">jhondoe@example.com</div>
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021-1-12

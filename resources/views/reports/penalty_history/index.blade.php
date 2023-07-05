@@ -2,6 +2,10 @@
 @section('title', 'PENALTY HISTSORY')
 @section('content')
 
+    <div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <h1 class="bold text-2xl text-blue-800 mb-6">Penalty History</h1>
+
     <!-- Main content -->
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
@@ -30,12 +34,6 @@
                                                 RECEIVABLE
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
-                                                TOTAL PAYMENT
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
-                                                SHORT OVER
-                                            </th>
-                                            <th class="px-6 py-2 text-xs text-white">
                                                 PAYMENT TYPE
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
@@ -58,12 +56,6 @@
                                                 <div class="text-sm text-gray-900">
                                                     99999
                                                 </div>
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">10000</div>
-                                            </td>
-                                            <td class="px-6 py-4 text-sm text-gray-900">
-                                                -----
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 12345678
@@ -98,4 +90,6 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 @endsection

@@ -2,6 +2,10 @@
 @section('title', 'USER LIST')
 @section('content')
 
+<div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <h1 class="bold text-2xl text-blue-800 mb-6">User List</h1>
+
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
@@ -10,10 +14,10 @@
 
         <div class="container mx-auto">
             <div class="flex flex-col">
-                <div class="margin-auto w-full">
+                <div class="w-full">
                     <div class="p-4 border-b border-gray-200 shadow">
                         <!-- <table> -->
-                        <table id="dataTable" class="w-full border-solid border-2 border-black-900">
+                        <table id="generalTable" class="w-full border-solid border-2 border-black-900">
                             <thead class="bg-black">
                                 <tr>
                                     <th class="px-6 py-2 text-xs text-white">
@@ -28,9 +32,9 @@
                                     <th class="px-6 py-2 text-xs text-white">
                                         STATUS
                                     </th>
-                                    <th class="px-6 py-2 text-xs text-white">
+                                    {{-- <th class="px-6 py-2 text-xs text-white">
 
-                                    </th>
+                                    </th> --}}
                                     <th class="px-6 py-2 text-xs text-white">
                                         ACTION
                                     </th>
@@ -65,7 +69,7 @@
                                             @endif
 
                                         </td>
-                                        <td class="px-6 py-4 text-left">
+                                        {{-- <td class="px-6 py-4 text-left">
                                             @if ($user->status == '0')
                                                 <form action="{{ route('rights-management.user-lists.setAsActive', $user) }}" method="POST">
                                                     @csrf
@@ -84,7 +88,7 @@
                                                     </button>
                                                 </form>
                                             @endif
-                                        </td>
+                                        </td> --}}
 
                                         <td class="px-6 py-4 text-left">
                                             <a class="px-5 py-2 bg-rose-500 hover:bg-rose-700 text-white cursor-pointer rounded-md" href="#">Reject</a>
@@ -109,28 +113,15 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
     <script>
         $(document).ready(function () {
-                $('#dataTable').DataTable();
+                $('#generalTable').DataTable();
 
             });
     </script>
 @endsection
-
-    {{--
-    <!-- /.content -->
-    <script>
-    $(document).ready(function(){
-        $('.delete_form').on('submit'), function(){
-            if(confirm("Are you sure you want to delete it?")){
-                return true;
-            }else{
-                return false;
-            }
-
-    });
-    </script>
-    @endsection --}}
 
 

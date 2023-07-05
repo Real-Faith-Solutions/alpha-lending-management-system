@@ -2,6 +2,9 @@
 @section('title', 'PRINT CONTRACT')
 @section('content')
 
+            <div class="p-4 sm:ml-64">
+            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <h1 class="bold text-2xl text-blue-800 mb-6">Print Contract</h1>
             <!-- Main content -->
             <div class="card mb-3 bg-white">
                 <div class="mb-3 flex justify-between">
@@ -30,7 +33,7 @@
                                             <th class="px-6 py-2 text-xs text-white">
                                                 LOAN AMOUNT
                                             </th>
-                                            <th class="px-6 py-2 text-xs text-white">
+                                            {{-- <th class="px-6 py-2 text-xs text-white">
                                                 LOAN INTEREST
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
@@ -38,7 +41,7 @@
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 CHEUQUE VOUCHER
-                                            </th>
+                                            </th> --}}
                                             <th class="px-6 py-2 text-xs text-white">
                                                 PN
                                             </th>
@@ -66,7 +69,7 @@
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021
                                             </td>
-                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                            {{-- <td class="px-6 py-4 text-sm text-gray-900">
                                                 1
                                             </td>
                                             <td class="px-6 py-4">
@@ -76,7 +79,7 @@
                                             </td>
                                             <td class="px-6 py-4">
                                                 <div class="text-sm text-gray-900">jhondoe@example.com</div>
-                                            </td>
+                                            </td> --}}
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 666
                                             </td>
@@ -99,4 +102,7 @@
                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
 @endsection

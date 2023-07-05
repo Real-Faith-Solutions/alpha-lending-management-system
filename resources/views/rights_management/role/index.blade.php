@@ -2,6 +2,8 @@
 @section('title', 'ROLE LIST')
 @section('content')
 
+    <div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
@@ -223,6 +225,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 <!-- Javascript code -->
 <script>
