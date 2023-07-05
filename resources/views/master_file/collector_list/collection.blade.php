@@ -7,19 +7,22 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Agent List</h1>
+          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Collection list</h1>
         </div>
 
     <div class="card bg-white">
         @include('components.filter')
     </div>
 
+
+    <div class="card bg-white relative overflow-x-auto shadow-md sm:rounded-lg">
+
     <div class="card bg-white relative overflow-x-auto shadow-md sm:rounded-lg">
         <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="text-gray-800 text-1xl">Agent Data Table</h1>
+          <h1 class="text-gray-800 text-1xl">Data Table</h1>
         </div>
 
         <!-- button -->
@@ -42,7 +45,7 @@
                         Valid Number
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        View
+                        Designated Area
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Action
@@ -52,16 +55,16 @@
             <tbody>
                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Emmanuel Robillos Mojares
+                        Mojares
                     </th>
                     <td class="px-6 py-4">
-                        Saranay blk 1 lot 7 jasmine streer bagumbong caloocan city
+                        npc line kaliwa bagumbong caloocan city
                     </td>
                     <td class="px-6 py-4">
-                        01-27-22435
+                        0-10-67872
                     </td>
                     <td class="px-6 py-4">
-                        Brgy 178
+                        Bgry 171
                     </td>
                     <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

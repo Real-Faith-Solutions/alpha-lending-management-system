@@ -111,17 +111,23 @@
                     <div id="master-file"
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-                            {{-- <li>
-                                <a href="{{ url('laboratory/lab-acceptance') }}" class="block px-4 py-2 hover:bg-gray-100">Lab Acceptance</a>
-                            </li> --}}
+
 
                             <li>
                                 <a href="{{ route('master_file.agent_list.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Agent List</a>
                             </li>
                             <li>
-                                <a href="{{ route('master_file.borrower_list.index') }}"
+                                <a href="{{ route('master_file.borrowers_list.credit_application') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Borrower List</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('master_file.Collector_list.collection') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Collection</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('master_file.credit_assessment.table') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Credit Assessment</a>
                             </li>
                         </ul>
                     </div>
@@ -129,8 +135,8 @@
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="funding"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        Funding <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        Funding <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
@@ -156,8 +162,8 @@
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="workspace"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        Workspace <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        Workspace <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
@@ -187,8 +193,8 @@
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="Reports"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        Reports <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        Reports <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>

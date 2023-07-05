@@ -23,14 +23,12 @@
                     session?</h3>
                 <form method="POST" action="{{ route('logout') }}" class="flex justify-around">
                     @csrf
-                    <a href="{{ route('logout') }}"
-                        class="btn btn-danger"
+                    <a href="{{ route('logout') }}" class="btn btn-danger"
                         onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         Yes, I'm sure. Sign out
                     </a>
-                    <button data-modal-hide="logout-modal" type="button"
-                        class="btn btn-secondary">No,
+                    <button data-modal-hide="logout-modal" type="button" class="btn btn-secondary">No,
                         cancel</button>
                 </form>
 

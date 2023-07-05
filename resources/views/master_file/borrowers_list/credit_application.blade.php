@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Agent List</h1>
+          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Borrower List</h1>
         </div>
 
     <div class="card bg-white">
@@ -15,11 +15,13 @@
     </div>
 
     <div class="card bg-white relative overflow-x-auto shadow-md sm:rounded-lg">
+
+        <div class="card bg-white relative overflow-x-auto shadow-md sm:rounded-lg">
         <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="text-gray-800 text-1xl">Agent Data Table</h1>
+          <h1 class="text-gray-800 text-1xl">Borrowers Data Table</h1>
         </div>
 
         <!-- button -->
@@ -33,13 +35,13 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Name
+                        Client Name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Address
+                        Client Address
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Valid Number
+                        Date
                     </th>
                     <th scope="col" class="px-6 py-3">
                         View
@@ -49,19 +51,20 @@
                     </th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Emmanuel Robillos Mojares
+                        emman
                     </th>
                     <td class="px-6 py-4">
-                        Saranay blk 1 lot 7 jasmine streer bagumbong caloocan city
+                        rainbow village 
                     </td>
                     <td class="px-6 py-4">
-                        01-27-22435
+                        01-20-01
                     </td>
                     <td class="px-6 py-4">
-                        Brgy 178
+                        Cash
                     </td>
                     <td class="px-6 py-4">
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

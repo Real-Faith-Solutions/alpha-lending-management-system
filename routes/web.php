@@ -30,6 +30,8 @@ use App\Http\Controllers\WorkspaceController;
 use App\Http\Controllers\FundingController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\MasterFileController;
+use App\Http\Controllers\CreditAssessmentController;
+
 
 // Route::get('master_file', function () {
 //     return view('master_file');
@@ -62,6 +64,16 @@ Route::middleware('auth', 'status')->group(function () {
         Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('rights-management.user-lists.setAsInactive');
         Route::get('role-lists', [RoleController::class, 'index'])->name('rights-management.role-lists.index');
 
+    });
+
+    Route::prefix('master_file')->group(function () {
+       
+        Route::get('agent_list', [CreditAssessmentController::class, 'index'])->name('master_file.agent_list.index');
+        Route::get('borrowers_list', [CreditAssessmentController::class, 'credit_application'])->name('master_file.borrowers_list.credit_application');
+        Route::get('collector_list', [CreditAssessmentController::class, 'collection'])->name('master_file.Collector_list.collection');
+        Route::get('credit_assessment', [CreditAssessmentController::class, 'table'])->name('master_file.credit_assessment.table');
+
+    
     });
 
     Route::prefix('workspace')->group(function () {
