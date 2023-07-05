@@ -1,4 +1,4 @@
-<nav class="border-gray-200 bg-white sticky top-0 z-10"">
+<nav class="border-gray-200 bg-white sticky top-0 z-10">
     <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         <a href="{{ url('/') }}" class="flex items-center">
             <img src="{{ asset('image/branding.png') }}" class="mr-3 w-44" alt="AQUALAB PH" />
@@ -67,7 +67,7 @@
                         Dashboard
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="service"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
                         Service <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -96,11 +96,11 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
                 <li>
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="laboratory"
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="master-file"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        Laboratory <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        Master file <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -108,58 +108,143 @@
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="laboratory"
+                    <div id="master-file"
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-                            {{-- <li>
-                                <a href="{{ url('laboratory/lab-acceptance') }}" class="block px-4 py-2 hover:bg-gray-100">Lab Acceptance</a>
-                            </li> --}}
+
 
                             <li>
-                                <a href="{{ url('laboratory.lab-lab-work-order.labWorkOrder') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Lab Work Order</a>
+                                <a href="{{ route('master_file.agent_list.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Agent List</a>
                             </li>
                             <li>
-                                <a href="{{ url('laboratory.lab_approval.index') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Lab Approval</a>
+                                <a href="{{ route('master_file.borrowers_list.credit_application') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Borrower List</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('master_file.Collector_list.collection') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Collection</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('master_file.credit_assessment.table') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Credit Assessment</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="funding"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        Records & Reports <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        Funding <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="dropdownNavbar"
+                    <div id="funding"
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ url('record-and-report.analysis-request.index') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Analysis Request</a>
+                                <a href="{{ route('funding.print_voucher.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Print Voucher</a>
                             </li>
                             <li>
-                                <a href="{{ url('record-and-report.lab-acceptance.index') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Lab Acceptance</a>
+                                <a href="{{ route('funding.print_contract.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Print Contract</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="workspace"
+                        class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+                        Workspace <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="workspace"
+                        class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
+                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="{{ route('workspace.payments_schedule.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Daily Payment</a>
                             </li>
                             <li>
-                                <a href="{{ url('record-and-report/lab-result') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Lab Results</a>
+                                <a href="{{ route('workspace.cash_payments.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Cash Payment</a>
                             </li>
                             <li>
-                                <a href="{{ url('record-and-report/facility') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Facility</a>
+                                <a href="{{ route('workspace.cheque_payment.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Cheque Payment</a>
                             </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="Reports"
+                        class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+                        Reports <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="Reports"
+                        class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
+                        <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ url('record-and-report.record_and_report.client_list.index') }}"
-                                    class="block px-4 py-2 hover:bg-gray-100">Client Lists</a>
+                                <a href="{{ route('reports.agents_commission.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Agents Commisions</a>
                             </li>
+
+                            <li>
+                                <a href="{{ route('reports.sales_reports.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Sales Report</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.fully_paid_accounts.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Fully Paid Accounts</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.penalty_history.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Penalty History</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.collection_itinerary_report.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Collection Itinerary Report</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.total_amortization.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Total Amortization</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.total_actual_payments.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Total Actual Payments</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('reports.collection_efficiency.index') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100">Colelction Efficiency
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 </li>
@@ -167,7 +252,7 @@
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="userManagement"
                         class="flex w-full items-center justify-between border-b border-gray-100 py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                        User Management <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
+                        Rights Management <svg class="ml-1 h-5 w-5" aria-hidden="true" fill="currentColor"
                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -179,12 +264,12 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('user-management.user-lists.index') }}"
+                                <a href="{{ route('rights-management.user-lists.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">User Lists</a>
                             </li>
 
                             <li>
-                                <a href="{{ route('user-management.role-lists.index') }}"
+                                <a href="{{ route('rights-management.role-lists.index') }}"
                                     class="block px-4 py-2 hover:bg-gray-100">Roles</a>
                             </li>
 

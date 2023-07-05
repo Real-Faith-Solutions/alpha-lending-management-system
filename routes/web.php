@@ -26,18 +26,23 @@ use App\Http\Controllers\PhysController;
 use App\Http\Controllers\QuerySearchController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\WorkspaceController;
+use App\Http\Controllers\FundingController;
+use App\Http\Controllers\ReportsController;
+use App\Http\Controllers\MasterFileController;
+use App\Http\Controllers\CreditAssessmentController;
 
-// Route::get('/', function () {
-//     return view('welcome');
+
+// Route::get('master_file', function () {
+//     return view('master_file');
 // });
-
 
 
 Route::get('403', function () {
     $user = Auth::user();
 
     if ($user->status == 1) {
-        return redirect()->route('login'); 
+        return redirect()->route('login');
     }
 
     return view('forbidden.status');
@@ -52,15 +57,65 @@ Route::middleware('auth', 'status')->group(function () {
 
     Route::get('/', [DashboardController::class , 'getAllData']);
 
-
-    Route::prefix('user-management')->group(function () {
+    Route::prefix('rights-management')->group(function () {
         // lab result status
-        Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('user-management.user-lists.index');
-        Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('user-management.user-lists.setAsActive');
-        Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('user-management.user-lists.setAsInactive');
-        Route::get('role-lists', [RoleController::class, 'index'])->name('user-management.role-lists.index');
+        Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('rights-management.user-lists.index');
+        Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('rights-management.user-lists.setAsActive');
+        Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('rights-management.user-lists.setAsInactive');
+        Route::get('role-lists', [RoleController::class, 'index'])->name('rights-management.role-lists.index');
 
     });
+
+    Route::prefix('master_file')->group(function () {
+       
+        Route::get('agent_list', [CreditAssessmentController::class, 'index'])->name('master_file.agent_list.index');
+        Route::get('borrowers_list', [CreditAssessmentController::class, 'credit_application'])->name('master_file.borrowers_list.credit_application');
+        Route::get('collector_list', [CreditAssessmentController::class, 'collection'])->name('master_file.Collector_list.collection');
+        Route::get('credit_assessment', [CreditAssessmentController::class, 'table'])->name('master_file.credit_assessment.table');
+
+    
+    });
+
+    Route::prefix('workspace')->group(function () {
+        // workspace
+        Route::get('payments_schedule', [WorkspaceController::class, 'payments_schedule'])->name('workspace.payments_schedule.index');
+        Route::get('cash_payments', [WorkspaceController::class, 'cash_payments'])->name('workspace.cash_payments.index');
+        Route::get('cheque_payment', [WorkspaceController::class, 'cheque_payment'])->name('workspace.cheque_payment.index');
+
+    });
+
+    Route::prefix('funding')->group(function () {
+        // funding
+        Route::get('print_contract', [FundingController::class, 'print_contract'])->name('funding.print_contract.index');
+        Route::get('print_voucher', [FundingController::class, 'print_voucher'])->name('funding.print_voucher.index');
+
+    });
+
+    Route::prefix('reports')->group(function () {
+        // reports
+        Route::get('agents_commission', [ReportsController::class, 'agents_commission'])->name('reports.agents_commission.index');
+        Route::get('sales_reports', [ReportsController::class, 'sales_reports'])->name('reports.sales_reports.index');
+        Route::get('fully_paid_accounts', [ReportsController::class, 'fully_paid_accounts'])->name('reports.fully_paid_accounts.index');
+        Route::get('penalty_history', [ReportsController::class, 'penalty_history'])->name('reports.penalty_history.index');
+        Route::get('collection_itinerary_report', [ReportsController::class, 'collection_itinerary_report'])->name('reports.collection_itinerary_report.index');
+        Route::get('total_amortization', [ReportsController::class, 'total_amortization'])->name('reports.total_amortization.index');
+        Route::get('total_actual_payments', [ReportsController::class, 'total_actual_payments'])->name('reports.total_actual_payments.index');
+        Route::get('collection_efficiency', [ReportsController::class, 'collection_efficiency'])->name('reports.collection_efficiency.index');
+    });
+
+    Route::prefix('master_file')->group(function () {
+        // master file
+        Route::get('borrower_list', [MasterFileController::class, 'borrower_list'])->name('master_file.borrower_list.index');
+        Route::get('agent_list', [MasterFileController::class, 'agent_list'])->name('master_file.agent_list.index');
+
+    });
+
+
+
+
+
+
+
 
 
 

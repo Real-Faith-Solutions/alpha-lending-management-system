@@ -20,7 +20,7 @@ class Status
             if (Auth::user()->status == '1') {
                 return $next($request);
             } else {
-                // return abort(401, 'Unauthorized action');
+                return abort(401, 'Unauthorized action');
                 return redirect('403');
             }
         } else {

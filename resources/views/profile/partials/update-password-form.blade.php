@@ -53,8 +53,8 @@
             @endforeach
         </div>
 
-        <div class="flex items-center gap-4">
-            <button class="btn btn-primary">Save changes</button>
+        <div class="flex items-center gap-4 justify-end">
+            <button class="w-40 py-3 px-4  text-center bg-indigo-600 rounded-md text-white text-sm hover:bg-indigo-500">Save changes</button>
         </div>
     </form>
 </section>
