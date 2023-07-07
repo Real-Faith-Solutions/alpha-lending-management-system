@@ -1,4 +1,4 @@
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="fixed top-0 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
@@ -9,7 +9,7 @@
               </svg>
            </button>
            <a href="{{ url('/') }}" class="flex items-center">
-            <img src="{{ asset('#') }}" class="ml-6" alt="ALPHA LENDING PH"/>
+            {{-- <img src="{{ asset('#') }}" class="ml-6" alt="ALPHA LENDING PH"/> --}}
             </a>
         </div>
         <div class="flex items-center">
@@ -17,7 +17,10 @@
               <div>
                 <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                   <span class="sr-only">Open user menu</span>
-                  <img class="w-8 h-8 rounded-full" src="#">
+                  {{-- <img class="w-8 h-8 rounded-full" src="#">  sample avatar sizing --}}
+                  <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                    <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                </div>
                 </button>
               </div>
               <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
@@ -50,21 +53,23 @@
           </div>
       </div>
     </div>
+
 </nav>
 
-  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 mt-6" aria-label="Sidebar">
-     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+  <aside id="logo-sidebar" class="fixed top-0 left-0 z-80 w-64 h-screen pt-20 transition-transform -translate-x-full bg-indigo-500 border-r border-gray-200 sm:translate-x-0 dark:bg-gray-100 dark:border-gray-700" aria-label="Sidebar">
+        <span class="fixed top-6 ml-3 text-white text-left whitespace-nowrap">LOAN MANAGEMENT SYSTEM</span>
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-indigo-500 dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li>
                <a href="{{ url('/') }}"
-                        class="@php if (url()->current() === url('/')): @endphp @php endif; @endphp ml-3 flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="@php if (url()->current() === url('/')): @endphp @php endif; @endphp ml-3 flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-800 dark:hover:bg-gray-700 group">
                      Dashboard
                </a>
             </li>
 
             <li>
-               <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="master-file" data-collapse-toggle="master-file">
-                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Master File</span>
+               <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-800 dark:text-white dark:hover:bg-gray-700 mt-4" aria-controls="master-file" data-collapse-toggle="master-file">
+                     <span class="flex-1 ml-3 text-white text-left whitespace-nowrap">Master File</span>
                </button>
                <ul id="master-file" class="hidden py-2 space-y-2">
                      <li>
@@ -80,28 +85,28 @@
             </li>
 
             <li>
-              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="funding" data-collapse-toggle="funding">
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-800 dark:text-white dark:hover:bg-gray-700 mt-4" aria-controls="funding" data-collapse-toggle="funding">
 
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Funding</span>
+                    <span class="flex-1 ml-3 text-white text-left whitespace-nowrap">Funding</span>
 
               </button>
               <ul id="funding" class="hidden py-2 space-y-2">
                 <li>
                     <a href="{{ route('funding.print_voucher.index') }}"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Agent List</a>
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Print Voucher</a>
                 </li>
 
                 <li>
                     <a href="{{ route('funding.print_contract.index') }}"
-                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Borrower List</a>
+                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Print Contract</a>
 
               </ul>
            </li>
 
            <li>
-              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="workspace" data-collapse-toggle="workspace">
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-800 dark:text-white dark:hover:bg-gray-700 mt-4" aria-controls="workspace" data-collapse-toggle="workspace">
 
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Workspace</span>
+                    <span class="flex-1 ml-3 text-white text-left whitespace-nowrap">Workspace</span>
 
               </button>
               <ul id="workspace" class="hidden py-2 space-y-2">
@@ -119,10 +124,8 @@
            </li>
 
            <li>
-              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="report" data-collapse-toggle="report">
-
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Reports</span>
-
+              <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-800 dark:text-white dark:hover:bg-gray-700 mt-4" aria-controls="report" data-collapse-toggle="report">
+                    <span class="flex-1 ml-3 text-white text-left whitespace-nowrap">Reports</span>
               </button>
               <ul id="report" class="hidden py-2 space-y-2">
                     <li>
@@ -162,9 +165,9 @@
 
            <li>
               <button type="button" id="dropdownNavbarLink" data-dropdown-toggle="rights1"
-              class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="rights-management" data-collapse-toggle="rights-management">
+              class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-800 dark:text-white dark:hover:bg-gray-700 mt-4" aria-controls="rights-management" data-collapse-toggle="rights-management">
 
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Rights Management</span>
+                    <span class="flex-1 ml-3 text-white text-left whitespace-nowrap">Rights Management</span>
 
               </button>
               <ul id="rights-management" class="hidden py-2 space-y-2">
@@ -179,4 +182,8 @@
               </ul>
            </li>
      </div>
+
   </aside>
+
+
+
