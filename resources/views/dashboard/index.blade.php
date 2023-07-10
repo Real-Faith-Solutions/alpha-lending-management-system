@@ -4,8 +4,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-  <div class="p-4 sm:ml-64">
-     <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
         <h1 class="bold text-2xl text-blue-800 mb-6">Dashboard</h1>
         <div class="mb-3 grid sm:grid-cols-1 sm:gap-2 lg:grid-cols-3 lg:gap-4">
             <div class="card bg-cyan-500">
@@ -46,65 +44,51 @@
             </div>
         </div>
 
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-        <h1 class="bold text-2xl text-blue-800 mb-14">Status and Assessment</h1>
-        <div class="card grid grid-cols-2 md:grid-cols-2 mt-6">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
+            <h1 class="bold text-2xl text-blue-800 mt-4 mb-14">Status and Assessment</h1>
+                <div class="card grid grid-cols-2 md:grid-cols-2 mt-6">
 
-        <canvas id="delinquentStatus" style="width:100%;max-width:600px"></canvas>
+                    <canvas id="delinquentStatus" style="width:100%;max-width:600px"></canvas>
 
-        <canvas id="chartCreditAssessment" style="width:100%;max-width:600px"></canvas>
-
-        </div>
-    </div>
-
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-        <h1 class="bold text-2xl text-blue-800 mb-14">CER Updates</h1>
-        <div class="card grid grid-cols-3 mt-16">
-
-          <div class="bold text-2xl text-gray-800">
-            <h1>Total Actual Payments</h1>
-
-          </div>
-
-          <div class="bold text-2xl text-gray-800">
-            <h1>Total Actual Amortization</h1>
-
-          </div>
-
-          <div class="bold text-2xl text-gray-800">
-
-            <h1>Total</h1>
-          </div>
-
-        </div>
-      </div>
-
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-            <h1 class="bold text-2xl text-blue-800 mb-14">Loan Status</h1>
-        {{-- <div class="grid grid-cols-2 md:grid-cols-2 mt-24"> --}}
-        <canvas id="loanStatus" style="width:100%;max-width:1000px;"></canvas>
+                    <canvas id="chartCreditAssessment" style="width:100%;max-width:600px"></canvas>
+                </div>
         </div>
 
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-            <h1 class="bold text-2xl text-blue-800 mb-14">Receivable Earning</h1>
-        <canvas id="chartCourseType" style="width:100%;max-width:1000px"></canvas>
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
+            <h1 class="bold text-2xl text-blue-800 mb-14">CER Updates</h1>
+                <div class="card grid grid-cols-3 mt-16">
+
+                    <div class="bold text-2xl text-gray-800">
+                        <h1>Total Actual Payments</h1>
+                    </div>
+
+                    <div class="bold text-2xl text-gray-800">
+                        <h1>Total Actual Amortization</h1>
+                    </div>
+
+                    <div class="bold text-2xl text-gray-800">
+                        <h1>Total</h1>
+                    </div>
+
+                </div>
         </div>
 
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-            <h1 class="bold text-2xl text-blue-800 mb-14">Late Payments</h1>
-        <canvas id="chartLatePayments" style="width:100%;max-width:1000px"></canvas>
-        </div>
-        </div>
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
+            <h1 class="bold text-2xl text-blue-800 mt-4 mb-14">Status and Assessment</h1>
+                <div class="card grid grid-cols-2 md:grid-cols-2 mt-6">
 
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-sm dark:border-gray-700 mt-14">
-            <footer>
-                <h1 class="bold text-2xl text-center text-blue-800">Loan Management System 2023</h1>
-          </footer>
+                    <canvas id="loanStatus" style="width:100%;max-width:600px;"></canvas>
+
+                    <canvas id="chartCourseType" style="width:100%;max-width:600px"></canvas>
+                </div>
         </div>
 
-     </div>
-  </div>
-
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
+            <h1 class="bold text-2xl text-blue-800 mt-4 mb-4">Late Payments</h1>
+                <div class="card grid grid-cols-2 md:grid-cols-1 mt-6 flex justify-center">
+                    <canvas id="chartLatePayments" style="width:100%;max-width:600px"></canvas>
+                </div>
+        </div>
 
   <script>
 
@@ -225,6 +209,12 @@
     });
 
     </script>
+
+@include('layouts.footer')
+
+@endsection
+
+
 
 
 

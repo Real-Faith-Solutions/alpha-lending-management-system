@@ -91,8 +91,8 @@
             </div>
         </div>
 
-    <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7">
+    {{-- <div class="p-4 sm:ml-64">
+        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
             <h1 class="bold text-2xl text-blue-800 mb-6">Cash Payment</h1>
 
     <!-- Main content -->
@@ -129,6 +129,15 @@
                                                 SHORT OVER
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
+                                                DUE DATE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                MATURITY DATE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                PAYMENT TYPE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
                                                 PENALTY
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
@@ -149,8 +158,17 @@
                                                     Andrei Kevin
                                                 </div>
                                             </td>
-                                            <td class="px-6 py-4">
-                                                <div class="text-sm text-gray-900">andreikevincasoco@gmail.com</div>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                2021
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                6969999
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                6969696
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                2021-1-12
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021
@@ -177,11 +195,7 @@
             </div>
         </div>
 
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-sm dark:border-gray-700 mt-14">
-            <footer>
-                <h1 class="bold text-2xl text-center text-blue-800">Loan Management System 2023</h1>
-          </footer>
-        </div>
+        @include('layouts.footer')
 
     <!-- Modal Script -->
     <script>
@@ -189,23 +203,6 @@
         document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('defaultModalButton1').click();
         });
-
-        // var openButton = document.getElementById('cash');
-        // var dialog = document.getElementById('dialog');
-        // var closeButton = document.getElementById('close');
-        // var overlay = document.getElementById('overlay');
-
-        // // show the overlay and the dialog
-        // openButton.addEventListener('click', function () {
-        //     dialog.classList.remove('hidden');
-        //     overlay.classList.remove('hidden');
-        // });
-
-        // // hide the overlay and the dialog
-        // closeButton.addEventListener('click', function () {
-        //     dialog.classList.add('hidden');
-        //     overlay.classList.add('hidden');
-        // });
     </script>
 
 @endsection

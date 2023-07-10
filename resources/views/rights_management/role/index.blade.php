@@ -2,8 +2,8 @@
 @section('title', 'ROLE LIST')
 @section('content')
 
-    <div class="p-4 sm:ml-64">
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7">
+    {{-- <div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
@@ -225,8 +225,15 @@
                 </div>
             </div>
         </div>
+    {{-- </div>
+</div> --}}
+
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-sm dark:border-gray-700 mt-14">
+        <footer>
+            <h1 class="bold text-2xl text-center text-blue-800">Loan Management System 2023</h1>
+    </footer>
     </div>
-</div>
+
 
 <!-- Javascript code -->
 <script>

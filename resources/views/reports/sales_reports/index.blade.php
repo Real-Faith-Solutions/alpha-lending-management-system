@@ -2,8 +2,8 @@
 @section('title', 'SALES REPORT')
 @section('content')
 
-        <div class="p-4 sm:ml-64">
-            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7">
+        {{-- <div class="p-4 sm:ml-64">
+            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
                 <h1 class="bold text-2xl text-blue-800 mb-6">Sales Report</h1>
 
                 <!-- Main content -->
@@ -36,6 +36,18 @@
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 LOAN TYPE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                LOAN AMOUNT
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                RECEIVABLE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                TERMS
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                FREQUENCY
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 TOTAL DEDUCTIONS
@@ -76,10 +88,22 @@
                                                 </div>
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
+                                                2021
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                99999
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021-1-12
                                             </td>
                                             <td class="px-6 py-4">
                                                 99999
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                13131
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                13131
                                             </td>
                                             <td class="px-6 py-4 font-medium text-gray-900">
                                                 <div
@@ -97,4 +121,7 @@
             </div>
         </div>
 
+        @include('layouts.footer')
+
 @endsection
+

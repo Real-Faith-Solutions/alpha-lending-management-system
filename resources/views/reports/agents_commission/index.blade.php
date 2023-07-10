@@ -45,8 +45,8 @@
             </div>
         </div>
 
-        <div class="p-4 sm:ml-64">
-            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7">
+        {{-- <div class="p-4 sm:ml-64">
+            <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
                 <h1 class="bold text-2xl text-blue-800 mb-6">Agents Commission</h1>
 
         <!-- Main content -->
@@ -79,10 +79,19 @@
                                                 BORROWER NAME
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
+                                                AGENT NAME
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
                                                 LOAN AMOUNT
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 LOAN RECEIVABLE
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                TOTAL COMMISSION
+                                            </th>
+                                            <th class="px-6 py-2 text-xs text-white">
+                                                MATURITY
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
                                                 STATUS
@@ -103,7 +112,18 @@
                                                 </div>
                                             </td>
                                             <td class="px-6 py-4">
+                                                <div class="text-sm text-gray-900">
+                                                    Angela Sin
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4">
                                                 <div class="text-sm text-gray-900">andreikevincasoco@gmail.com</div>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                2021
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-900">
+                                                1
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021
@@ -135,6 +155,8 @@
                 </div>
             </div>
         </div>
+
+        @include('layouts.footer')
 
 <!-- Javascript code -->
 <script>
