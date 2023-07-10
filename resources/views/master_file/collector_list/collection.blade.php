@@ -1,18 +1,18 @@
 @extends('layouts.app')
-@section('title', 'borrower_list')
+@section('title', 'agent_list')
 @section('content')
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Agent List</h1>
+          <h1 class="text-gray-800 text-5xl subpixel-antialiased">Collection List</h1>
         </div>
-
 
     <div class="card bg-white">
         @include('components.filter')
-        <!-- Modal toggle -->
+<!-- Modal toggle -->
 <button data-modal-target="staticModal" data-modal-toggle="staticModal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
   + ADD 
 </button>
@@ -119,6 +119,7 @@
     </div>
 </div>    
     </div>
+    
 
     <div class="card bg-white relative overflow-x-auto shadow-md sm:rounded-lg">
         <section class="content-header">
@@ -154,13 +155,13 @@
             <tbody>
                 <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Dianne Villaflores
+                        Ara joy 
                     </th>
                     <td class="px-6 py-4">
-                        Prado bagumbong caloocan city
+                        Kaliwa phase 9
                     </td>
                     <td class="px-6 py-4">
-                        09877654
+                        09878761
                     </td>
                     <td class="px-6 py-4">
                         none

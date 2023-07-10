@@ -84,22 +84,21 @@
                         class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white font-normal shadow">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="{{ route('funding.print_voucher.index') }}"
+                                <a href="{{ route('master_file.agent_list.agent') }}"
 
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray700">Agent List</a>
                              </li>
                              <li>
-                                <a href="{{ route('funding.print_voucher.index') }}"-
+                                <a href="{{ route('master_file.borrower_list.index') }}"-
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Borrower List</a>
                              </li>
                              <li>
-                                <a href="{{ route('funding.print_voucher.index') }}"
-
+                                <a href="{{ route('master_file.collector_list.collection') }}"
                                 class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray700">Collection</a>
                              </li>
-                             <li>
-                                <a href="{{ route('funding.print_voucher.index') }}"-
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Credit Assessment</a>
+                              <li>
+                                <a href="{{ route('master_file.credit-file.credit_assessment') }}"
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray700">Credit Assessment</a>
                              </li>
                         </ul>
                     </div>
