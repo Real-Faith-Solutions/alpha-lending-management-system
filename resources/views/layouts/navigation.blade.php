@@ -3,7 +3,7 @@
         <a href="{{ url('/') }}" class="flex items-center ml-5">
             <img src="{{ asset('image/alpha_logo.png') }}" class="rounded-md mr-6 w-12 h-12" alt="LOAN MANAGEMENT SYSTEM" />
             <span class="self-center whitespace-nowrap text-1xl font-semibold">
-                {{-- {{ config('app.name') }} --}} Loan Management System
+                {{-- {{ config('app.name') }} --}} LMS
             </span>
         </a>
         <div class="flex items-center md:order-2">

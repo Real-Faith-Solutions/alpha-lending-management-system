@@ -3,21 +3,13 @@
 @section('content')
 
 
-            <h1 class="bold text-2xl text-blue-800 mb-6">Collection Effciciency</h1>
+    <h1 class="bold text-2xl text-blue-800 mb-6">Collection Effciciency</h1>
 
     <!-- Main content -->
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
             <label>@yield('title')</label>
         </div>
-                <!-- datatable -->
-                <div class="container flex justify-center mx-auto">
-                    <div class="flex flex-col">
-                        <div class="w-full">
-
-                             </div>
-                        </div>
-                     </div>
 
                     <div class="p-4 border-b border-gray-200 shadow">
                         <table class="divide-y divide-gray-300" id="generalTable">

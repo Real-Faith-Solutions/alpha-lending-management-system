@@ -2,9 +2,7 @@
 @section('title', 'TOTAL ACTUAL PAYMENTS')
 @section('content')
 
-    {{-- <div class="p-4 sm:ml-64">
-        <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
-            <h1 class="bold text-2xl text-blue-800 mb-6">Total Actual Payments</h1>
+    <h1 class="bold text-2xl text-blue-800 ml-6 mb-6">Total Actual Payments</h1>
 
     <!-- Main content -->
     <div class="card mb-3 bg-white">
@@ -156,5 +154,7 @@
                 </section>
             {{-- </div>
         </div> --}}
+
+        @include('layouts.footer')
 
 @endsection

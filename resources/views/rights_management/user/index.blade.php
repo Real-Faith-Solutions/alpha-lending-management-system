@@ -2,9 +2,7 @@
 @section('title', 'USER LIST')
 @section('content')
 
-{{-- <div class="p-4 sm:ml-64">
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-7"> --}}
-        <h1 class="bold text-2xl text-blue-800 mb-6">User List</h1>
+    <h1 class="bold text-2xl text-blue-800 ml-6 mb-6">User List</h1>
 
     <div class="card mb-3 bg-white">
         <div class="mb-3 flex justify-between">
@@ -12,14 +10,15 @@
                  <a class="px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white cursor-pointer rounded-md" href="{{ route('register') }}">ADD NEW USER</a>
         </div>
 
-        <div class="container mx-auto">
+        <!-- datatable -->
+        <div class="container mx-auto overflow-x-auto">
             <div class="flex flex-col">
                 <div class="w-full">
                     <div class="p-4 border-b border-gray-200 shadow">
-                        <!-- <table> -->
-                        <table id="generalTable" class="w-full border-solid border-2 border-black-900">
-                            <thead class="bg-black">
-                                <tr>
+                        <div class="overflow-x-auto">
+                            <table class="table-auto w-full divide-y divide-gray-300" id="generalTable">
+                                <thead class="bg-black">
+                                    <tr>
                                     <th class="px-6 py-2 text-xs text-white">
                                         NAME
                                     </th>
@@ -110,14 +109,10 @@
                 </div>
             </div>
         </div>
-    {{-- </div>
-</div> --}}
-
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-sm dark:border-gray-700 mt-14">
-        <footer>
-            <h1 class="bold text-2xl text-center text-blue-800">Loan Management System 2023</h1>
-    </footer>
     </div>
+</div>
+
+@include('layouts.footer')
 
 
 @endsection
