@@ -95,6 +95,9 @@ Route::middleware('auth', 'status')->group(function () {
         // master file
         Route::get('borrower_list', [MasterFileController::class, 'borrower_list'])->name('master_file.borrower_list.index');
         Route::get('agent_list', [MasterFileController::class, 'agent_list'])->name('master_file.agent_list.index');
+        Route::get('credit_application', [MasterFileController::class, 'credit_application'])->name('master_file.credit_application.index');
+        Route::get('credit_assessment', [MasterFileController::class, 'credit_assessment'])->name('master_file.credit_assessment.index');
+        Route::get('collector_list', [MasterFileController::class, 'collector_list'])->name('master_file.collector_list.index');
 
     });
 

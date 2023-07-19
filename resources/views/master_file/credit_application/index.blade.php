@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('title', 'BORROWER LIST')
+@section('title', 'CREDIT APPLICATION')
 @section('content')
 
-        <h1 class="bold text-2xl text-blue-800 ml-6 mb-6">BORROWER LIST</h1>
+        <h1 class="bold text-2xl text-blue-800 ml-6 mb-6">CREDIT APPLICATION</h1>
 
         <!-- Main content -->
         <div class="card mb-3 bg-white">
@@ -45,10 +45,10 @@
                                                 CREDIT TERMS
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
-                                                TOTAL REVENUE
+                                                STATUS
                                             </th>
                                             <th class="px-6 py-2 text-xs text-white">
-                                                LOAN STATUS
+                                                ACTIONS
                                             </th>
                                         </tr>
                                     </thead>
@@ -80,13 +80,16 @@
                                             <td class="px-6 py-4 text-sm text-gray-900">
                                                 2021-1-12
                                             </td>
-                                            <td class="px-6 py-4">
-                                                99999
-                                            </td>
                                             <td class="px-6 py-4 font-medium text-gray-900">
                                                 <div
                                                 class="mr-2 rounded bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
                                                 PAID
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 font-medium text-gray-900">
+                                                <div
+                                                class="mr-2 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                                                VIEW
                                                 </div>
                                             </td>
                                         </tr>
