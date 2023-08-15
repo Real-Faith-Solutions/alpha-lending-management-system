@@ -53,10 +53,10 @@
 
         <div class="ml-2 text-sm font-medium text-gray-900 mt-2 flex items-center justify-end">
         <a class="rounded-md text-sm font-medium text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    href="#">
+             href="{{ env('APP_URL') }}register">
                    Create an account?
-                </a>
-            </div>
+        </a>
+        </div>
 
     </form>
 @endsection

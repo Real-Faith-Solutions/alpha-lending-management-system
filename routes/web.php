@@ -12,24 +12,28 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\ClientController;
-use App\Http\Controllers\AnalysisRequestController;
-use App\Http\Controllers\ChemController;
-use App\Http\Controllers\CreateRawDataFileController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LabAcceptanceController;
-use App\Http\Controllers\LabApprovalController;
-use App\Http\Controllers\LabResultStatusController;
-use App\Http\Controllers\MicroController;
-use App\Http\Controllers\PdfController;
-use App\Http\Controllers\PhysController;
-use App\Http\Controllers\QuerySearchController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WorkspaceController;
 use App\Http\Controllers\FundingController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\MasterFileController;
+use App\Http\Controllers\ForbesTopController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LoanController;
+use App\Http\Controllers\AmortizationController;
+use App\Http\Controllers\CollateralController;
+use App\Http\Controllers\ChequeController;
+use App\Http\Controllers\BorrowerController;
+use App\Http\Controllers\DeductionController;
+use App\Http\Controllers\AgentItineraryController;
+use App\Http\Controllers\AgentController;
+use App\Http\Controllers\CollectorController;
+use App\Http\Controllers\CreditAssessmentController;
+use App\Http\Controllers\AgentCommissionReleaseController;
+use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\ActionCommandController;
 
 // Route::get('master_file', function () {
 //     return view('master_file');
@@ -56,7 +60,7 @@ Route::middleware('auth', 'status')->group(function () {
     Route::get('/', [DashboardController::class , 'getAllData']);
 
     Route::prefix('rights-management')->group(function () {
-        // lab result status
+        // right management status
         Route::get('user-lists', [RegisteredUserController::class, 'index'])->name('rights-management.user-lists.index');
         Route::put('user-lists/{user}/active', [UserController::class, 'setAsActive'])->name('rights-management.user-lists.setAsActive');
         Route::put('user-lists/{user}/inactive', [UserController::class, 'setAsInactive'])->name('rights-management.user-lists.setAsInactive');
@@ -100,47 +104,7 @@ Route::middleware('auth', 'status')->group(function () {
         Route::get('collector_list', [MasterFileController::class, 'collector_list'])->name('master_file.collector_list.index');
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Route::middleware('guest')->group(function () {
@@ -192,6 +156,15 @@ Route::middleware('auth', 'status')->group(function () {
 
 
 });
+
+Route::group([
+    'prefix'     => 'master_file',
+], function () {
+    Route::post('add', [AgentController::class, 'addAgent']);
+    Route::get('record', [AgentController::class, 'getAgent']);
+    Route::get('/profile/{id}', [AgentController::class, 'getAgentProfile']);
+});
+
 
 Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout')->middleware('auth');
