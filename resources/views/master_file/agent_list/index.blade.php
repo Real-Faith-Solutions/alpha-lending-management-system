@@ -9,16 +9,17 @@
         <div id="dialog" class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 sm:w-3/5 md:w-1/2 lg:w-1/3 bg-white rounded-md px-4 sm:px-8 py-6 space-y-5 sm:space-y-6 drop-shadow-lg">
             <h1 class="text-2xl font-semibold text-blue-500 text-center">ADD AGENT LIST</h1>
             <div class="w-full">
-                <form class="bg-white shadow-md rounded px-4 sm:px-8 pt-6 pb-8 mb-4">
+                <form class="bg-white shadow-md rounded px-4 sm:px-8 pt-6 pb-8 mb-4" method="POST" onsubmit="submitDataForms('{{ config('app.url') }}admin.master_file', 'addAgent', 'addAgent');">
+                    @csrf
                     <div class="mb-4">
-                        <label class="block text-sm font-bold mb-2" for="username">
+                        <label class="block text-sm font-bold mb-2" for="full_name">
                             Full Name:
                             <input class="shadow appearance-none border rounded w-full sm:w-4/5 mt-2 sm:ml-14 py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" placeholder="Firstname, Lastname" required>
                         </label>
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-sm font-bold mb-2" for="username">
+                        <label class="block text-sm font-bold mb-2" for="address">
                             Address:
                             <input class="shadow appearance-none border rounded w-full sm:w-4/5 mt-2 sm:ml-14 py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" name="address" id="address" placeholder="House number, Street, Subdivision, Barangay, City, Province" required>
                         </label>
@@ -55,7 +56,7 @@
 
                      <!-- button -->
                      <div class="mt-6 mb-3 flex items-center justify-end">
-                        <button class="w-40 py-3 px-4  text-center bg-indigo-600 rounded-md text-white text-sm hover:bg-indigo-500" data-bs-toggle="modal" data-bs-target="#addCollector" id="collector"> Add Agent List</button>
+                        <button class="w-40 py-3 px-4  text-center bg-indigo-600 rounded-md text-white text-sm hover:bg-indigo-500" data-bs-toggle="modal" data-bs-target="#addAgent" id="agent"> Add Agent List</button>
                     </div>
 
                <!-- datatable -->
@@ -82,9 +83,18 @@
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-300">
-                                        <tr class="text-center">
-
+                                        @foreach($agent as $recipient)
+                                        <tr class="mx-md-n5">
+                                          <td>{{$recipient->name ?? 0}}</td>
+                                          <td>{{$recipient->address ?? 0}}</td>
+                                          <td>{{$recipient->valid_id_number ?? 0}}</td>
+                                          <td>
+                                              <a href="{{ config('app.url') }}admin/master_file/agent_list/profile/{{ $recipient->id ?? '' }}">
+                                                  <button class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></button>
+                                              </a>
+                                          </td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -99,7 +109,7 @@
 
     <!-- Modal -->
     <script>
-    var openButton = document.getElementById('collector');
+    var openButton = document.getElementById('agent');
     var dialog = document.getElementById('dialog');
     var closeButton = document.getElementById('close');
     var overlay = document.getElementById('overlay');
@@ -115,6 +125,23 @@
         dialog.classList.add('hidden');
         overlay.classList.add('hidden');
     });
+
+    function submitDataForms(urls, formName, modalName){
+        const url = urls;
+        fetch(url, {
+            method : "POST",
+            body: new FormData(document.getElementById(formName)),
+        }).then(
+            response => response.text() // .json(), etc.
+            // same as function(response) {return response.text();}
+        ).then(
+            html => console.log(html)
+        );
+
+        $('#'+modalName).modal('hide');
+        //alert(response);
+        //location.reload();
+    }
     </script>
 
     @endsection

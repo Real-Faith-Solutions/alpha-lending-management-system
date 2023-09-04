@@ -97,6 +97,10 @@ Route::middleware('auth', 'status')->group(function () {
 
     Route::prefix('master_file')->group(function () {
         // master file
+        Route::post('add', [AgentController::class, 'addAgent'])->name('addAgent');
+        Route::get('record', [AgentController::class, 'getAgent']);
+        Route::get('/profile/{id}', [AgentController::class, 'getAgentProfile']);
+
         Route::get('borrower_list', [MasterFileController::class, 'borrower_list'])->name('master_file.borrower_list.index');
         Route::get('agent_list', [MasterFileController::class, 'agent_list'])->name('master_file.agent_list.index');
         Route::get('credit_application', [MasterFileController::class, 'credit_application'])->name('master_file.credit_application.index');
@@ -157,12 +161,28 @@ Route::middleware('auth', 'status')->group(function () {
 
 });
 
+// Route::group([
+//     'prefix'     => 'master_file',
+// ], function () {
+//     Route::post('add', [AgentController::class, 'addAgent']);
+//     Route::get('record', [AgentController::class, 'getAgent']);
+//     Route::get('/profile/{id}', [AgentController::class, 'getAgentProfile']);
+// });
+
 Route::group([
-    'prefix'     => 'master_file',
+    'prefix'     => 'collector',
 ], function () {
-    Route::post('add', [AgentController::class, 'addAgent']);
-    Route::get('record', [AgentController::class, 'getAgent']);
-    Route::get('/profile/{id}', [AgentController::class, 'getAgentProfile']);
+    Route::post('add', [CollectorController::class, 'addCollector']);
+    Route::get('record', [CollectorController::class, 'getCollector']);
+    Route::get('/profile/{id}', [CollectorController::class, 'getCollectorProfile']);
+    Route::get('destroy/{id}', [CollectorController::class, 'destroyL'])->name('destroyL');
+});
+
+Route::group([
+    'prefix'     => 'cheque',
+], function () {
+    Route::get('add', [ChequeController::class, 'addCheque']);
+    Route::get('record', [ChequeController::class, 'getCheque']);
 });
 
 

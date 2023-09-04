@@ -20,7 +20,7 @@ class AgentController extends Controller
             'designated_area' => $request->designated_area,
         ]);
 
-        return "Success";
+        return view('master_file.agent_list.index');
     }
 
     public function getAgent(Request $request){
@@ -31,7 +31,7 @@ class AgentController extends Controller
 
     public function getAgentPage(Request $request) {
         $agent = Agent::all();
-        return view('admin.master.agent.list', compact('agent'))->render();
+        return view('admin.master_file.agent_list.index', compact('agent'))->render();
     }
 
     public function getAgentProfilePage(Request $request) {
@@ -43,7 +43,29 @@ class AgentController extends Controller
                     ->where('id', '=', $request->id)
                     ->first();
         if(Auth::check()){
-        return view('admin.page_forms.agent_profile', compact('record'))->render();
+        return view('admin.master_file.agent_list.index', compact('record'))->render();
         }
+    }
+
+    public function getAgentProfile(Request $request){
+        $agent = Agent::query()
+            ->where('id', $request->id)
+            ->with(['loans'])
+            ->first();
+
+        $totalReferredLoans = count($agent->loans);
+
+        $sumCommisions = $agent->loans->sum('amount') * .12;
+        $sumReceivableCommisions = $agent->loans->sum('amount') * .12;
+        // $sumReleasedCommisions = $agent->loans->sum();
+
+        return response()->json([
+            'total_referred_loans' => $totalReferredLoans,
+            'total_commssions' => $sumCommisions,
+            // 'total_receivable_commssions' => $sumReceivableCommisions,
+            'name' => $agent->name,
+            'address' => $agent->address,
+            'valid_id_number' =>$agent->valid_id_number,
+        ]);
     }
 }

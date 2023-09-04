@@ -2,6 +2,12 @@
 @section('title', 'Dashboard')
 @section('content')
 
+@php
+$sumPayment = DB::table('payments')->get()->sum('payment_start_date');
+$sumAmort = DB::table('credit_assessments')->get()->sum('approve_loan_amount');
+// dd($sumPayment);
+@endphp
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <h1 class="bold text-2xl text-blue-800 ml-6 mb-6">Dashboard</h1>
@@ -64,10 +70,12 @@
 
             <!-- CER Updates section -->
             <div class="bold text-2xl text-gray-800">
+                <p>{{number_format($sumPayment)}}</p>
                 <h1>Total Actual Payments</h1>
             </div>
 
             <div class="bold text-2xl text-gray-800">
+                <p>{{number_format($sumAmort - $sumPayment)}}
                 <h1>Total Actual Amortization</h1>
             </div>
 
